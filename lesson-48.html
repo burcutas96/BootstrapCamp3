@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Bootstrap 5 | 48. Ders</title>
+</head>
+<body>
+    <!-- navbar'ın large ekranların altında, navbar-toggler-icon'u ile görünmesini sağlıyoruz. -->
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+        <div class="container">
+            <!--bootstrap'te navbar'a bir logo eklemenin yolu .navbar-brand class'ını kullanmaktır.-->
+            <a href="#" class="navbar-brand">Logo</a>  <!--navbar-brand class'ını istediğimiz yerde kullanabiliriz.-->
+           
+            <!--data-bs-toggle="collapse" attribute'u ile butona açılıp kapanma görevini veriyoruz. Hangi nesneyi açıp kapatacağını ise
+                data-bs-target="#nContent" attribute'u ile bildiriyoruz.
+            -->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nContent" 
+                aria-controls="nContent" aria-expanded="false" aria-label="menüyü açıp/kapatma butonu">
+                <!-- Ekrana sığmayan navbar'ımız için açılıp kapanan bir ikon ekliyoruz. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Menümüzü gizli oluşturmamız lazım. Bu yüzden collapse sınıfını kullanıyoruz. collapse sınıfının içine koyduğumuz 
+                içeriği gizleyebiliyorduk. Açılıp kapanma işlemini de yukarıda oluşturduğumuz buton ile sağlayacağız.
+            -->
+            <!--navbar-collapse genellikle bir düğme veya başka bir tetikleyiciyle etkinleştirilen bir geçiş efekti sağlar. 
+                Tetikleyiciye tıklandığında veya dokunulduğunda, gezinme menüsü genellikle yanıt olarak genişler veya daralır. 
+                Böylece kullanıcılar küçük ekranlarda gezinme menüsünü açabilir veya kapatabilirler.
+            -->
+            <div class="collapse navbar-collapse" id="nContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="true">Anasayfa</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Hakkımızda</a></li>
+                    <!-- dropdown-toggle class'ı ile "Çalışmalarımız"ın sağında çıkan ikonu oluşturduk. -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="nDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Çalışmalarımız</a>
+                        <ul class="dropdown-menu" aria-labelledby="nDropdown">
+                            <li><a href="#" class="dropdown-item">İlk Çalışma</a></li>
+                            <li><a href="#" class="dropdown-item">İkinci Çalışma</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="#" class="dropdown-item">Son Çalışma</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">İletişim</a></li>
+                </ul>
+                <!--navbar'da form elemanlarını kullanabiliyoruz.-->
+                <form class="d-flex ms-2">
+                    <input class="form-control me-2" type="search" placeholder="Arama yap" aria-label="arama metin kutusu">
+                    <button class="btn btn-outline-light" type="button">Ara</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi et laudantium blanditiis, 
+                quaerat sint aperiam at eaque voluptatem sit ullam itaque animi vero, suscipit eos magni 
+                voluptas nisi dolorum quis! Magnam inventore tenetur repellendus debitis voluptate aut 
+                quam, sit sunt quae amet. Maiores fugit iste, deserunt tempore libero tempora voluptatem 
+                rerum! Quis quo earum expedita blanditiis perspiciatis reprehenderit soluta voluptate. 
+                Animi, necessitatibus doloribus quis incidunt fugit expedita optio dicta aliquam culpa 
+                eius voluptatem velit illum, labore dolor ipsa placeat eveniet inventore modi sequi, 
+                saepe harum repellat. Praesentium sit assumenda recusandae!
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
